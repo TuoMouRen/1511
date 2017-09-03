@@ -1,0 +1,10 @@
+            cha[i] = ch;
+        }
+    }     
+    for (i=0;cha[i] != EOF;i++){   
+            putchar(cha[i]);    
+
+
+
+
+   char cha[];

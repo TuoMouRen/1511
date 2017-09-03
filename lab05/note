@@ -1,0 +1,52 @@
+int i;
+    for(i=0;i<N_TILES;i++){
+        if (sequence1[i]==sequence2[i])
+
+
+
+
+
+
+int hidden_sequence[N_TILES];
+    int guess[N_TILES];    
+    i=0;    
+    while (i < N_TILES) {
+        if (scanf("%d", &sequence1[i]) == 1){                                          
+            i++;
+        }else{
+            break;        
+        }
+    }    
+    if (i==N_TILES){
+       for(i=0;i<N_TILES;i++){
+            hidden_sequence[i]=sequence1[i];
+        }
+    }else{
+        return 0;
+    }
+    
+//guess part:
+    i=0;
+    while(i<N_TILES){
+        if(scanf("%d",&sequence2[i]) != 1){
+            i++;
+        }else{
+            break;
+        }
+    }
+    if (i==N_TILES){
+        for(i=0;i<N_TILES;i++){
+            guess[i]=sequence2[i];
+        }
+    }else{
+        return 0;
+    }
+    
+//count part:
+
+    int count;
+    for (i=0,count=0;i<N_TILES;i++){
+        if(guess[i]==hidden_sequence[i]){
+            count++;
+        }
+    }
